@@ -1,7 +1,9 @@
+import { RegisterUser } from "./interface/components/user/RegisterUser"
 
 function App() {
 return(
   <>
+    <RegisterUser/>
   </>
 )
 }

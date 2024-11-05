@@ -1,15 +1,15 @@
 import { UserRepository } from "../domain/UserRepository";
 
 export const createUserService = (userRepository: UserRepository) => ({
-    createUser: (data: {userId: string,username: string, email: string, password:string, phonenumber:string})=> {
+    createUser: async (data: {userId: string,username: string, email: string, password:string, phonenumber:string})=> {
         // validaciones
-        userRepository.createUser(data)
+        await userRepository.createUser(data)
     },
     
-    getUsers: () => userRepository.getUsers(),
+    getUsers: async () => (await userRepository.getUsers()),
     
-    loginUser: (username: string, password: string) => {
-        userRepository.userLogin(username, password)
+    loginUser: async (username: string, password: string) => {
+       return await userRepository.userLogin(username, password)
     }
 
 })
