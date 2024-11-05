@@ -18,8 +18,8 @@ export const createAxiosUserRespository = (): UserRepository => {
             const response = await apiClient.post('/user/register', user)
             return response.data
         },
-        async userLogin(username: string, password: string){
-            const response = await apiClient.post('/user/login', {username, password})
+        async userLogin(email: string, password: string){
+            const response = await apiClient.post('/user/login', {email, password})
             return response.data
         }
     }

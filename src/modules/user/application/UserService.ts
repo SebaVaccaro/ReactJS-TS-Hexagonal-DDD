@@ -8,8 +8,8 @@ export const createUserService = (userRepository: UserRepository) => ({
     
     getUsers: async () => (await userRepository.getUsers()),
     
-    loginUser: async (username: string, password: string) => {
-       return await userRepository.userLogin(username, password)
+    loginUser: async (email: string, password: string) => {
+       return await userRepository.userLogin(email, password)
     }
 
 })
