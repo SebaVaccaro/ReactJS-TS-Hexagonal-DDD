@@ -1,12 +1,13 @@
-import { useForm } from "react-hook-form"
+import { SubmitHandler, useForm } from "react-hook-form"
 import { createAxiosUserRespository } from "../../../modules/user/infrastructure/AxiosUserRepository"
 import { createUserService } from "../../../modules/user/application/UserService"
+import { IFormInput } from "../../../modules/user/domain/IFormInput"
 
 export const RegisterUser = () =>{
     const repository = createAxiosUserRespository()
     const service = createUserService(repository)
-    const { register, handleSubmit, errors} = useForm()
-    const onSubmitForm =async (data: {username: string, email:string, password: string, phonenumber:string}) =>{
+    const { register, handleSubmit} = useForm<IFormInput>()
+    const onSubmitForm: SubmitHandler<IFormInput> = async (data) =>{
         await service.createUser({...data, userId: "1234"})
         await service.getUsers()
     }
