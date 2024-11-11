@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+
 import { useUserRegistration } from "../../hooks/user/useUserRegistration"
 
 
@@ -6,7 +6,6 @@ export const RegisterUser = () =>{
     const { register, onSubmitForm} = useUserRegistration()
     return(
         <>
-            <Link to='/login'>login</Link>
             <h5>register</h5>
             <form onSubmit={onSubmitForm}>
                 <input type="text" placeholder="username" {...register("username")}/>

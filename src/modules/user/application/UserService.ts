@@ -5,7 +5,9 @@ export const createUserService = (userRepository: UserRepository) => ({
         // validaciones
         await userRepository.createUser(data)
     },
-    
+    getUserById : async (id: string) =>{
+        return await userRepository.getUserById(id)
+    },
     getUsers: async () => (await userRepository.getUsers()),
     
     loginUser: async (email: string, password: string) => {

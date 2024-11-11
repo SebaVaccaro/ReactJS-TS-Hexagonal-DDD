@@ -1,8 +1,8 @@
-import { useUserStore } from "../../../modules/user/infrastructure/userStore/userStore"
+import React from "react"
+import { useGetUserById } from "../../hooks/user/useGetUserByID"
 
-export const UserProfile = () =>{
-    const loggedData = useUserStore(state => state.loggedData)
-    const user = loggedData.user
+export const UserProfile: React.FC<{id: string}> = ({id}) =>{
+    const { user } = useGetUserById(id)
     return(
         <>
             {   user?

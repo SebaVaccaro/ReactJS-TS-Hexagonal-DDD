@@ -11,9 +11,9 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path="/register" element={<RegisterPage/>}/>
-        <Route path="/login" element={<LoginPage/>}/>
-        <Route path="/user" element={<UserPage />}/>
+        <Route path="/user/register" element={<RegisterPage/>}/>
+        <Route path="/auth/login" element={<LoginPage/>}/>
+        <Route path="/user/:id" element={<UserPage />}/>
         <Route path="*" element={<HomePage/>}/>
       </Routes>
     </BrowserRouter>

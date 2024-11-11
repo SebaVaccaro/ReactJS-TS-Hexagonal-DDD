@@ -2,11 +2,11 @@ import { Link } from "react-router-dom"
 
 export const NavBar = () => {
     return(
-        <div>
+        <div className="NavBar">
             <Link to='/'>home page</Link>
-            <Link to='/login'>login</Link>
-            <Link to='/register'>register</Link>
-            <Link to='/user'>user profile</Link>
+            <Link to='/auth/login'>login</Link>
+            <Link to='/user/register'>register</Link>
+            <Link to='/user/:id'>user profile</Link>
         </div>
     )
 }
