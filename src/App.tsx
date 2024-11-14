@@ -4,16 +4,18 @@ import { NavBar } from "./interface/components/application/NavBar"
 import { RegisterPage } from "./interface/pages/RegisterPage"
 import { LoginPage } from "./interface/pages/LoginPage"
 import { UserPage } from "./interface/pages/UserPage"
+import { ProfilePage } from "./interface/pages/ProfilePage"
 
 function App() {
   return (
     <BrowserRouter>
       <NavBar/>
       <Routes>
-        <Route path="/" element={<HomePage/>} />
+        <Route path="/" element={<HomePage/>}/>
         <Route path="/user/register" element={<RegisterPage/>}/>
         <Route path="/auth/login" element={<LoginPage/>}/>
-        <Route path="/user/:id" element={<UserPage />}/>
+        <Route path="/user/profile" element={<ProfilePage/>}/>
+        <Route path="/user/:id" element={<UserPage/>}/>
         <Route path="*" element={<HomePage/>}/>
       </Routes>
     </BrowserRouter>

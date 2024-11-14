@@ -1,5 +1,4 @@
-export interface User{
-    _id: string
+export interface UserCreate{
     username: string
     email: string
     password: string

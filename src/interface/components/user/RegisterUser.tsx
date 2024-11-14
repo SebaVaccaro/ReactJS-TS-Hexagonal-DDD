@@ -12,6 +12,8 @@ export const RegisterUser = () =>{
                 <input type="text" placeholder="email" {...register("email")}/>
                 <input type="password" placeholder="password" {...register("password")}/>
                 <input type="text" placeholder="phonenumber" {...register("phonenumber")}/>
+                <input type="text" placeholder="gender" {...register("gender")}/>
+                <input type="text" placeholder="age" {...register("age")}/>
                 <button>register</button>
             </form>
         </>

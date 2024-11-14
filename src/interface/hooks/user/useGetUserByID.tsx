@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import { createAxiosUserRespository } from "../../../modules/user/infrastructure/api/AxiosUserRepository"
-import { createUserService } from "../../../modules/user/application/UserService"
+import { UserService } from "../../../modules/user/application/UserService"
 import { User } from "../../../modules/user/domain/User"
 
 export const useGetUserById = (id:string) =>{
     const repository = createAxiosUserRespository()
-    const service = createUserService(repository)
+    const service = UserService(repository)
     const [user, setUser] = useState<User | null>(null)
     useEffect(()=>{
         const fetch = async () =>{

@@ -1,5 +1,6 @@
 import {  useNavigate, useParams } from "react-router-dom"
 import { UserProfile } from "../components/user/UserProfile"
+import { useGetUserById } from "../hooks/user/useGetUserByID"
 
 export const UserPage = () => {
     const navigate = useNavigate()
@@ -7,7 +8,8 @@ export const UserPage = () => {
     if(!id){navigate('/')
         return null
     }
+    const { user } = useGetUserById(id)
     return(
-        <UserProfile id={id}/>
+        <UserProfile user={user}/>
     )
 }
