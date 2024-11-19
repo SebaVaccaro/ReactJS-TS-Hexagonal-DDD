@@ -5,7 +5,8 @@ import { useGetUserById } from "../hooks/user/useGetUserByID"
 export const UserPage = () => {
     const navigate = useNavigate()
     const {id} = useParams()
-    if(!id){navigate('/')
+    if(!id){
+        navigate('/')
         return null
     }
     const { user } = useGetUserById(id)

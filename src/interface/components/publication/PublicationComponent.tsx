@@ -5,8 +5,9 @@ export const PublicationComponent: React.FC<{publication:Publication | null}> = 
     return(
         <>{
             publication &&
-            <div>
+            <div className="user-profile">
                 <h3>{publication._id}</h3>
+                <h3>{publication.userCreate}</h3>
                 <h3>{publication.description}</h3>
             </div>
         }
