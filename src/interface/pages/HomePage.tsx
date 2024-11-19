@@ -5,8 +5,8 @@ export const HomePage = () => {
     const {publications} = useGetPublications()
     return(
         <>
-            {publications && publications.map(publication=> 
-                <PublicationSummaryComponent publication={publication}/>
+            {publications && publications.map((publication, index)=> 
+                <PublicationSummaryComponent key={index} publication={publication}/>
             )}
         </>
     )

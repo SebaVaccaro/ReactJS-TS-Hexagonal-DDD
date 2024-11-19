@@ -7,11 +7,15 @@ import { UserPage } from "./interface/pages/UserPage"
 import { ProfilePage } from "./interface/pages/ProfilePage"
 import { CreatePublicationPage } from "./interface/pages/CreatePublicationPage"
 import { PublicationPage } from "./interface/pages/PublicationPage"
+import { UserMenu } from "./interface/components/user/UserMenu"
 
 function App() {
   return (
     <BrowserRouter>
-      <NavBar/>
+      <div className="header">
+        <NavBar/>
+        <UserMenu/>
+      </div>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/user/register" element={<RegisterPage/>}/>

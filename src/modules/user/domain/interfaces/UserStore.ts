@@ -6,4 +6,5 @@ export interface UserStore{
         user: User | null
     }
     loginUser(user: User): void
+    logOut():void
 }

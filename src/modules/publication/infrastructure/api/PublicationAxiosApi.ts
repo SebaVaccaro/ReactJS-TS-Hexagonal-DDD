@@ -19,7 +19,6 @@ export const PublicationAxiosApi = () =>{
         
         getPublicationById: async ({id}: IdI): Promise<Publication>=>{
             const res = await apiClient.get(`/publication/${id}`)
-            console.log(res)
             return res.data
         },
 

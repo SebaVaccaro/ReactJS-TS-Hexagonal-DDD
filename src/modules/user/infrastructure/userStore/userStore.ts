@@ -15,8 +15,17 @@ export const useUserStore = create<UserStore>((set)=>{
             }
         }))
     }
+    const logOut = () =>{
+        set(()=> ({
+            loggedData:{
+                logged: false,
+                user: null
+            }
+        }))
+    }
     return{
         loggedData,
-        loginUser
+        loginUser,
+        logOut
     }
 })
